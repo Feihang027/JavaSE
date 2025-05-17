@@ -74,10 +74,11 @@ public class Main {
         Person p = new Person();
     }
 }
-
 注意事项：
 new 类名() 是创建对象的语法。
 Person p = new Person(); 代表我们创建了一个具体的人
+
+
 
 
 # 🧩 对象的使用（Using Objects）
@@ -92,13 +93,14 @@ public static void main(String[] args) {
     Person p = new Person(); // p 存放的是对象的引用
 }
 
+
+
+
 ## 🎯 Java 对象的使用细节
 ---
-
 ### 🔁 对象引用的复制
 
-当我们将一个对象变量赋值给另一个变量时，实际上是复制了引用地址，而不是复制整个对象。
-
+当我们将一个对象变量赋值给另一个变量时，实际上是复制了引用地址，而不是复制整个对象
 ```java
 public static void main(String[] args) {
     Person p1 = new Person();
@@ -108,7 +110,6 @@ public static void main(String[] args) {
 }
 
 如果两个变量分别指向不同的对象：
-
 ```java
 public static void main(String[] args) {
     Person p1 = new Person();
@@ -117,9 +118,12 @@ public static void main(String[] args) {
     System.out.println(p1 == p2); // false，引用的是不同的对象
 }
 
+
+
+
+
 ## 修改和访问对象的属性
 我们可以通过对象的引用来访问和修改它的属性：
-
 ```java
 public static void main(String[] args) {
     Person p = new Person();
@@ -128,7 +132,6 @@ public static void main(String[] args) {
 }
 
 不同对象的属性互不影响：
-
 ```java
 public static void main(String[] args) {
     Person p1 = new Person();
@@ -140,6 +143,9 @@ public static void main(String[] args) {
     System.out.println(p1.name); // 小明
     System.out.println(p2.name); // 大明
 }
+
+
+
 
 ## ❗ 注意 null 引用
 引用类型的变量可以赋值为 null，表示它当前不引用任何对象：
@@ -153,6 +159,9 @@ public static void main(String[] args) {
     System.out.println(p.name);
 }
 ⚠️ 空指针异常（NullPointerException）是 Java 中最常见的运行时错误之一
+
+
+
 
 
 ## 🧾 对象属性的默认值
