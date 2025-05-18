@@ -40,7 +40,7 @@ public static void main(String[] args) {
 }
 
 
-四、静态方法
+## 四、静态方法
 static void test() {
     System.out.println("我是静态方法");
 }
@@ -57,7 +57,7 @@ static void test() {
 }
 
 
-五、静态代码块
+## 五、静态代码块
 static String info;
 static {
     info = "测试"; // 静态代码块初始化静态变量
@@ -65,7 +65,7 @@ static {
 静态代码块用于在类加载时初始化静态变量。
 
 
-六、静态内容的加载时机
+## 六、静态内容的加载时机
 类在首次使用时被 JVM 加载，静态内容也会在类加载时初始化。
 
 类会在以下情况被加载：
