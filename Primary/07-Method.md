@@ -142,8 +142,28 @@ public static void main(String[] args) {
 **说明**：引用类型变量的值是对象的地址。方法中修改的是同一个对象。
 
 ---
+# 形参和实参
 
-✅ **小结**：
-- 方法是类的行为。
-- 方法可以带参数，也可以有返回值。
-- 基本类型参数是值传递，引用类型参数是地址的值传递。
+## 定义
+
+- **形参（形式参数）**：在定义方法时所声明的参数，例如 `String name`。
+- **实参（实际参数）**：在调用方法时传入的参数，例如 `"钢门吹雪"`。
+
+## 示例代码
+
+```java
+// Phonef.java
+public class Phone {
+    public void call(String name) {
+        System.out.println("给" + name + "打电话");
+    }
+}
+
+// Testf.java
+public class Testf {
+    public static void main(String[] args) {
+        Phone p = new Phone();
+        p.call("钢门吹雪");
+    }
+}
+
