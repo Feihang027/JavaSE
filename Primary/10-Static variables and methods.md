@@ -44,7 +44,7 @@ public static void main(String[] args) {
 static void test() {
     System.out.println("我是静态方法");
 }
-静态方法 属于类本身，而不是对象：![静态方法示意图](./Image/static.png)
+静态方法 属于类本身，而不是对象：![静态方法示意图](Image/static.png)
 
 因此：
 不能访问非静态成员变量。
