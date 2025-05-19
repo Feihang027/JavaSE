@@ -50,6 +50,45 @@ public class NestedIf {
     }
 }
 
+# if 语句的注意点
+
+## 1. 大括号的位置
+
+- 大括号 `{` 的开头**可以另起一行书写**，但建议写在第一行的末尾，以提高代码可读性。
+
+## 2. 单句代码时大括号可省略
+
+- 如果 `if` 的语句体中**只有一句代码**，**大括号可以省略不写**。
+- **建议：尽量不要省略大括号**，以防止后续维护中引起歧义或错误。
+
+## 3. 判断布尔变量时不使用 `==`
+
+- 如果判断的是一个 **布尔类型的变量**，**不要使用 `==` 来比较**。
+- 正确写法：`if(flag)` 或 `if(!flag)`，而不是 `if(flag == true)`。
+
+---
+
+## 示例代码
+
+```java
+public class IfDemo2 {
+    public static void main(String[] args) {
+        // 示例1：判断数字是否大于等于10
+        int number = 20;
+        if (number >= 10) {
+            int a = 100; // 1. 定义变量a，2. 给变量a赋值为100
+            System.out.println("number大于等于10");
+        }
+
+        // 示例2：布尔变量判断
+        boolean flag = false;
+        if (flag) {
+            System.out.println("flag的值为true");
+        }
+    }
+}
+
+
 2. switch 结构
 switch 更适用于值的精准匹配，不能进行范围判断。例如，根据学生的等级（A/B/C）进行分班：
 public class SwitchDemo {
