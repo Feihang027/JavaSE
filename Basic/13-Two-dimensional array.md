@@ -15,7 +15,7 @@ int[][] arr2 = {
     {4, 5, 6, 7}
 };
 
-2. 动态初始化
+## 2. 动态初始化
 ```java
 // 创建3行5列的二维数组
 int[][] arr3 = new int[3][5];
@@ -24,7 +24,7 @@ int[][] arr3 = new int[3][5];
 arr3[0][0] = 10;
 arr3[1][2] = 20;
 
-3. 数组遍历
+## 3. 数组遍历
 ```java
 for (int i = 0; i < arr2.length; i++) {
     for (int j = 0; j < arr2[i].length; j++) {
@@ -34,7 +34,7 @@ for (int i = 0; i < arr2.length; i++) {
 }
 
 
-4. 实战案例：商场营业额统计
+## 4. 实战案例：商场营业额统计
 ```java
 public class SalesAnalysis {
     public static void main(String[] args) {
