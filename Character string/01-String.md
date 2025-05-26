@@ -64,7 +64,7 @@ public class StringDemo {
     }
 }
 ```
-### 遍历字符串
+## 遍历字符串
 public char charAt(intindex): 根据索引返回字符
 public int length(): 返回此字符串的长度
 数组的长度:数组名.length
@@ -129,6 +129,31 @@ static string reverser(string str){
   return result;
 } 
 ```
+## 字符串截取
+截取String substring(int beginindex, int endlndex)
+注意点:包头不包尾，包左不包右，只有返回值才是截取的小串
+String substring(int beginIndex)  截取到末尾
+
+### 示例代码
+//1.获取一个手机号码        String phoneNumber="13112349468"
+//2.截取手机号码前面三位    String start=phoneNumber.substring(0,3);
+//3.截取手机号码后面四位    String end=phoneNumber.substring(7);
+//4.拼接                   String result = start + “****"+ end;
+//5.打印                   System.out.println(result); //131****9468
+
+
+## 替换
+String replace(旧值,新值)替换
+注意点:只有返回值才是替换之后的结果
+
+### 示例代码
+//1.获取到说的话
+string talk="你玩的真好，以后不要再玩了，TMD"
+//2.把里面的敏感词TMD替换为***
+String result =talkreplace( target: "TMD", replacement: "***")
+//3.打印结果
+System.out.println(result); //你玩的真好，以后不要再玩了，***.
+
 
 ### 特别说明
 #### Scanner 键盘录入字符串与直接赋值的区别：
