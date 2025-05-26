@@ -1,0 +1,86 @@
+
+# String 构造方法与字符串比较
+
+## 创建 String 对象的两种方式
+
+1. **直接赋值：**
+```java
+String name = "尼古拉斯·阿玮";
+```
+
+2. **new 构造：**
+| 构造方法                         | 说明                             |
+| -------------------------------- | -------------------------------- |
+| `public String()`                | 创建空白字符串，不含任何内容     |
+| `public String(String original)` | 根据传入的字符串，创建字符串对象 |
+| `public String(char[] chs)`      | 根据字符数组，创建字符串对象     |
+| `public String(byte[] chs)`      | 根据字节数组，创建字符串对象     |
+
+### 示例代码：
+
+```java
+// 使用直接赋值
+String s1 = "abc";
+System.out.println(s1); // abc
+
+// 使用 new 构造
+String s2 = new String();
+System.out.println("@" + s2 + "!"); // ""
+
+// 根据字符串构造
+String s3 = new String("abc");
+System.out.println(s3); // abc
+
+// 根据字符数组构造
+char[] chs = {'a', 'b', 'c', 'd'};
+String s4 = new String(chs);
+System.out.println(s4); // abcd
+
+// 根据字节数组构造
+byte[] bytes = {97, 98, 99, 100};
+String s5 = new String(bytes);
+System.out.println(s5); // abcd
+```
+
+## 字符串对象比较
+
+```java
+public class StringDemo {
+    public static void main(String[] args) {
+        String s1 = new String("abc"); // 在堆中创建
+        String s2 = "abc"; // 在字符串常量池中创建
+
+        // == 比较地址值
+        System.out.println(s1 == s2); // false
+
+        // equals 比较内容
+        boolean result1 = s1.equals(s2);
+        System.out.println(result1); // true
+
+        // equalsIgnoreCase 忽略大小写比较
+        String s3 = "Abc";
+        boolean result2 = s1.equalsIgnoreCase(s3);
+        System.out.println(result2); // true
+    }
+}
+```
+
+### 特别说明
+
+#### Scanner 键盘录入字符串与直接赋值的区别：
+
+```java
+Scanner sc = new Scanner(System.in);
+System.out.println("请输入一个字符串：");
+String str1 = sc.next(); // 用户输入 abc
+
+String str2 = "abc";
+
+System.out.println(str1 == str2); // false
+```
+
+- `str1`：通过 `Scanner.next()` 获取，本质上是 `new String("abc")`，位于堆内存。
+- `str2`：直接赋值的字符串，位于字符串常量池中。
+- 因此，`==` 比较的是地址，不相等。
+
+> 建议字符串内容比较统一使用 `.equals()` 或 `.equalsIgnoreCase()`，不要用 `==`。
