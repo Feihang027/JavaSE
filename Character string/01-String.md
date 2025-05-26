@@ -64,9 +64,15 @@ public class StringDemo {
     }
 }
 ```
+### 遍历字符串
+public char charAt(intindex): 根据索引返回字符
+public int length(): 返回此字符串的长度
+数组的长度:数组名.length
+字符串的长度:字符串对象.length()
+
+
 
 ### 特别说明
-
 #### Scanner 键盘录入字符串与直接赋值的区别：
 
 ```java
