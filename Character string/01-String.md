@@ -89,6 +89,46 @@ numberCount++
 //3.输出打印
 System.out.println("小写字母有:"+ smallcount +"个");System.out.println("大写字母有:"+ bigcount +“个");System.out.println("数字字母有:"+numbercount +"个");
 ```
+### 示例代码（字符串拼接）：
+```java
+public static string arrTostring(int[] arr){
+  if(arr == null){
+    return "”；
+  }
+  if(arr.length == 0){
+    return "[]";
+  }
+
+  String result ="[";
+  //当代码执行到这里表示什么?//表示数组不是nu11，也不是长度为0的
+  for(inti=0;i< arr.length;i++){
+  //i 索引 arr[i]元素
+  if(i == arr.length-1){
+    result = result + arr[i];
+  }else{
+    result = result + arr[i]+",
+//此时拼接右括号
+  result = result +"]";
+  return result;
+ }
+}
+```
+
+### 示例代码（字符串反转）：
+```java
+public static void main(string[]args){
+  String result =reverser( str:"abc");
+  System.out.println(result);
+}  
+static string reverser(string str){
+  String result =""；
+  for(int i=str.length()-1;i >=0;i--){
+    //i 依次表示字符串中的每一个索引 (倒着的)
+    char Ic = str.charAt(i);
+    result=result +c;
+  return result;
+} 
+```
 
 ### 特别说明
 #### Scanner 键盘录入字符串与直接赋值的区别：
